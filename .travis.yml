@@ -18,7 +18,7 @@ script:
   - echo "=============================="
   - uname -a
   - docker pull laszewski/cloudmesh-tex:0.0.1
-  - docker run laszewski/cloudmesh-tex:0.0.1 
+  - docker run -d laszewski/cloudmesh-tex:0.0.1 
   - docker images
   - docker ps -a
   - docker images ls
