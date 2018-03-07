@@ -24,4 +24,8 @@ script:
   - docker images ls
   - ls
   - python --version
+  - pyenv install 3.6.4
+  - pyenv venv1
+  - source venv1/bin/activate
+  - python --version
 
