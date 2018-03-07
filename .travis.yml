@@ -21,3 +21,5 @@ script:
   - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; make pdflatex"
   - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; ls"
   - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; ls; pdflatex vonLaszewski-bigdata.tex; ls;"
+  - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; ls; python --version;"
+  - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; ls; pyenv --version;"
