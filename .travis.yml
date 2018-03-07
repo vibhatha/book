@@ -9,29 +9,13 @@ before_install:
   - echo "=============================="
   - echo "Before Install"
   - echo "=============================="
+  - uname -a
   - python --version
+  - docker pull laszewski/cloudmesh-tex:0.0.1
 
 
 script:
   - echo "=============================="
   - echo "Scripts"
   - echo "=============================="
-  - uname -a
-  - docker pull laszewski/cloudmesh-tex:0.0.1
-  - docker run -d laszewski/cloudmesh-tex:0.0.1 
-  - docker images
-  - docker ps -a
-  - docker images ls
-  - ls
-  - python --version
-  - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-  - export PATH="$HOME/.pyenv/bin:$PATH"
-  - eval "$(pyenv init -)"
-  - eval "$(pyenv virtualenv-init -)"
-  - pyenv update
-  - pyenv --version
-  - pyenv install 3.6.4
-  - pyenv venv1
-  - source venv1/bin/activate
-  - python --version
-
+  - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; make pdflatex" 
